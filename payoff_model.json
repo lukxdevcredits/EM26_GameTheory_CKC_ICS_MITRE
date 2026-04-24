@@ -1,0 +1,51 @@
+{
+  "units": "MU",
+  "system_parameters": {
+    "V_objective_map": {
+      "Reconnaissance": 1000,
+      "Weaponization": 2000,
+      "Delivery": 3000,
+      "Exploitation": 5000,
+      "Installation": 7000,
+      "Command & Control": 9000,
+      "Actions on Objectives": 15000
+    },
+    "C_downtime_per_min": 30,
+    "C_falsepos_maint": 500,
+    "discount_factor": 0.95,
+    "T_max": 20,
+    "N_runs": 200
+  },
+  "bayesian_parameters": {
+    "initial_belief_high_cap": 0.5,
+    "likelihood_block_high_cap": 0.9,
+    "likelihood_block_low_cap": 0.2
+  },
+  "payoff_parameters": {
+    "base_defender_cost_passive": 5,
+    "base_defender_cost_active": 50,
+    "attacker_stealthy_gain": 40,
+    "attacker_standard_gain": 100,
+    "attacker_aggressive_gain": 500,
+    "penalty_stealthy_detection": -20,
+    "penalty_standard_detection": -80,
+    "penalty_aggressive_detection": -150
+  },
+  "detection_parameters": {
+    "base_false_positive_rate": 0.05,
+    "base_detection_sensitivity": 0.6
+  },
+  "C_def_low": 5,
+  "C_def_med": 25,
+  "C_def_high": 80,
+  "strategic_sensitivity": { 
+    "low": 0.1, 
+    "med": 0.5, 
+    "high": 0.9 
+  },
+  "strategic_false_positive": {
+    "low": 0.02,
+    "med": 0.05,
+    "high": 0.12
+  }
+}

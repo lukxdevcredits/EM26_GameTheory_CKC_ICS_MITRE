@@ -1,0 +1,23 @@
+{
+  "attack_file": "attack_techniques.json",
+  "payoff_file": "payoff_model.json",
+  "experiments": [
+    {
+      "name": "Solver_Bayesian_Adaptive",
+      "description": "Runs a sequential game where the Attacker updates beliefs (Bayesian) and both players choose the Nash Equilibrium strategy.",
+      "N_episodes": 200,
+      "attacker_type": "Bayesian_Learner"
+    },
+{
+      "name": "Solver_Insider_Threat",
+      "description": "Insider with authorized access (Lower detection for Standard actions)",
+      "N_episodes": 200
+    },
+{
+      "name": "Solver_Hardened_Defense",
+      "description": "Standard External Attacker vs. Optimized/Hardened Defense (High Detection)",
+      "N_episodes": 200
+    }
+  ],
+  "seed": 12345
+}

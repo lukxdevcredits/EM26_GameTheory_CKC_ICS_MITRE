@@ -1,0 +1,256 @@
+{
+  "ics_attack_tactics": [
+    {
+      "ckc_stage": "Reconnaissance",
+      "tactic": "Discovery",
+      "techniques": [
+        {
+          "name": "Network Sniffing",
+          "id": "T0842",
+          "base_success_prob": 0.90,
+          "base_detectability_lambda": 0.05,
+          "impact_type": "info_gathering",
+          "impact_magnitude": 10,
+          "attacker_cost": 20,
+          "strategy_class": "Stealthy"
+        },
+        {
+          "name": "Remote System Information Discovery",
+          "id": "T0888",
+          "base_success_prob": 0.85,
+          "base_detectability_lambda": 0.30,
+          "impact_type": "info_gathering",
+          "impact_magnitude": 10,
+          "attacker_cost": 10,
+          "strategy_class": "Standard"
+        },
+        {
+          "name": "Wireless Sniffing",
+          "id": "T0887",
+          "base_success_prob": 0.98,
+          "base_detectability_lambda": 0.80,
+          "impact_type": "info_gathering",
+          "impact_magnitude": 20,
+          "attacker_cost": 2,
+          "strategy_class": "Aggressive"
+        }
+      ]
+    },
+    {
+      "ckc_stage": "Weaponization",
+      "tactic": "Evasion",
+      "techniques": [
+        {
+          "name": "Masquerading",
+          "id": "T0849",
+          "base_success_prob": 0.60,
+          "base_detectability_lambda": 0.05,
+          "impact_type": "preparation",
+          "impact_magnitude": 0,
+          "attacker_cost": 100,
+          "strategy_class": "Stealthy"
+        },
+        {
+          "name": "Engineering Workstation Compromise",
+          "id": "T0818",
+          "base_success_prob": 0.75,
+          "base_detectability_lambda": 0.30,
+          "impact_type": "preparation",
+          "impact_magnitude": 0,
+          "attacker_cost": 40,
+          "strategy_class": "Standard"
+        },
+        {
+          "name": "Exploitation for Evasion",
+          "id": "T0820",
+          "base_success_prob": 0.90,
+          "base_detectability_lambda": 0.70,
+          "impact_type": "preparation",
+          "impact_magnitude": 0,
+          "attacker_cost": 10,
+          "strategy_class": "Aggressive"
+        }
+      ]
+    },
+    {
+      "ckc_stage": "Delivery",
+      "tactic": "Initial Access",
+      "techniques": [
+        {
+          "name": "Supply Chain Compromise",
+          "id": "T0862",
+          "base_success_prob": 0.40,
+          "base_detectability_lambda": 0.10,
+          "impact_type": "initial_access",
+          "impact_magnitude": 0,
+          "attacker_cost": 200,
+          "strategy_class": "Stealthy"
+        },
+        {
+          "name": "Spearphishing Attachment",
+          "id": "T0865",
+          "base_success_prob": 0.60,
+          "base_detectability_lambda": 0.40,
+          "impact_type": "initial_access",
+          "impact_magnitude": 0,
+          "attacker_cost": 30,
+          "strategy_class": "Standard"
+        },
+        {
+          "name": "Replication Through Removable Media",
+          "id": "T0847",
+          "base_success_prob": 0.85,
+          "base_detectability_lambda": 0.85,
+          "impact_type": "initial_access",
+          "impact_magnitude": 0,
+          "attacker_cost": 5,
+          "strategy_class": "Aggressive"
+        }
+      ]
+    },
+    {
+      "ckc_stage": "Exploitation",
+      "tactic": "Execution",
+      "techniques": [
+        {
+          "name": "User Execution",
+          "id": "T0863",
+          "base_success_prob": 0.95,
+          "base_detectability_lambda": 0.05,
+          "impact_type": "integrity",
+          "impact_magnitude": 0,
+          "attacker_cost": 500,
+          "strategy_class": "Stealthy"
+        },
+        {
+          "name": "Modify Controller Tasking",
+          "id": "T0821",
+          "base_success_prob": 0.70,
+          "base_detectability_lambda": 0.50,
+          "impact_type": "integrity/availability",
+          "impact_magnitude": 0,
+          "attacker_cost": 50,
+          "strategy_class": "Standard"
+        },
+        {
+          "name": "Change Operating Mode",
+          "id": "T0858",
+          "base_success_prob": 0.90,
+          "base_detectability_lambda": 0.95,
+          "impact_type": "integrity",
+          "impact_magnitude": 0,
+          "attacker_cost": 5,
+          "strategy_class": "Aggressive"
+        }
+      ]
+    },
+    {
+      "ckc_stage": "Installation",
+      "tactic": "Persistence",
+      "techniques": [
+        {
+          "name": "Server Software Component: Web Shell",
+          "id": "T1505.003",
+          "base_success_prob": 0.60,
+          "base_detectability_lambda": 0.15,
+          "impact_type": "persistence",
+          "impact_magnitude": 0,
+          "attacker_cost": 150,
+          "strategy_class": "Stealthy"
+        },
+        {
+          "name": "Modify Program",
+          "id": "T0889",
+          "base_success_prob": 0.80,
+          "base_detectability_lambda": 0.40,
+          "impact_type": "persistence",
+          "impact_magnitude": 0,
+          "attacker_cost": 20,
+          "strategy_class": "Standard"
+        },
+        {
+          "name": "Project File Infection",
+          "id": "T0873",
+          "base_success_prob": 0.90,
+          "base_detectability_lambda": 0.90,
+          "impact_type": "lateral_movement",
+          "impact_magnitude": 0,
+          "attacker_cost": 10,
+          "strategy_class": "Aggressive"
+        }
+      ]
+    },
+    {
+      "ckc_stage": "Command & Control",
+      "tactic": "Command and Control",
+      "techniques": [
+        {
+          "name": "Connection Proxy",
+          "id": "T0884",
+          "base_success_prob": 0.70,
+          "base_detectability_lambda": 0.10,
+          "impact_type": "c2",
+          "impact_magnitude": 0,
+          "attacker_cost": 100,
+          "strategy_class": "Stealthy"
+        },
+        {
+          "name": "Standard Application Layer Protocol",
+          "id": "T0869",
+          "base_success_prob": 0.85,
+          "base_detectability_lambda": 0.30,
+          "impact_type": "c2",
+          "impact_magnitude": 0,
+          "attacker_cost": 30,
+          "strategy_class": "Standard"
+        },
+        {
+          "name": "Commonly Used Port",
+          "id": "T0885",
+          "base_success_prob": 0.95,
+          "base_detectability_lambda": 0.85,
+          "impact_type": "c2",
+          "impact_magnitude": 0,
+          "attacker_cost": 5,
+          "strategy_class": "Aggressive"
+        }
+      ]
+    },
+    {
+      "ckc_stage": "Actions on Objectives",
+      "tactic": "Impact",
+      "techniques": [
+        {
+          "name": "Theft of Operational Information",
+          "id": "T0882",
+          "base_success_prob": 0.50,
+          "base_detectability_lambda": 0.15,
+          "impact_type": "integrity",
+          "impact_magnitude": 50,
+          "attacker_cost": 100,
+          "strategy_class": "Stealthy"
+        },
+        {
+          "name": "Manipulation of View",
+          "id": "T0832",
+          "base_success_prob": 0.25,
+          "base_detectability_lambda": 0.50,
+          "impact_type": "integrity",
+          "impact_magnitude": 150,
+          "attacker_cost": 50,
+          "strategy_class": "Standard"
+        },
+        {
+          "name": "Loss of Safety",
+          "id": "T0880",
+          "base_success_prob": 0.98,
+          "base_detectability_lambda": 0.95,
+          "impact_type": "availability",
+          "impact_magnitude": 600,
+          "attacker_cost": 10,
+          "strategy_class": "Aggressive"
+        }
+      ]
+    }
+  ]
+}
